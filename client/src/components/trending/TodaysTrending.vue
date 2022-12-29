@@ -1,8 +1,8 @@
 <template>
   <q-page class="q-pa-xl flex= justify-center" style="color: #383c3e">
-    <div class="container flex justify-center column q-pa-xl">
+    <div class="container flex justify-center column">
       <p class="text-h4">Todays Trending</p>
-      <p>People loves it most the past week...</p>
+      <p class="text-subtitle1">People loves it most the past week...</p>
       <div class="row q-gutter-md">
         <div class="col">
           <q-carousel
