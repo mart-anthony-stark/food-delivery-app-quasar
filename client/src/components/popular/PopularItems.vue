@@ -3,29 +3,14 @@
     <p class="text-h4">Popular Items</p>
     <p class="text-subtitle1">More Ordered Items</p>
     <div class="flex justify-center q-gutter-xl">
-      <q-card
-        class="item-card my-card column items-start q-pb-md"
-        flat
-        v-for="item in items"
-        :key="item.id"
-      >
-        <img :src="item.img" />
-        <q-card-section class="column q-gutter-sm">
-          <div class="text-h6">{{ item.name }}</div>
-          <div>{{ item.desc }}</div>
-          <p class="q-pt-none text-h5">৳{{ item.price }}</p>
-        </q-card-section>
-
-        <q-btn icon="add" color="accent" class="q-ml-md add-btn" outline
-          >Add</q-btn
-        >
-      </q-card>
+      <ItemCard v-for="item in items" :key="item._id" :item="item" />
     </div>
   </q-page>
 </template>
 
 <script>
 import { defineComponent } from "vue";
+import ItemCard from "./ItemCard.vue";
 
 export default defineComponent({
   name: "PopularItems",
@@ -91,6 +76,7 @@ export default defineComponent({
       ],
     };
   },
+  components: { ItemCard },
 });
 </script>
 
