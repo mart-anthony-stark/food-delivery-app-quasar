@@ -56,9 +56,9 @@ export default defineComponent({
     return {
       links: [
         { text: "Home", url: "" },
-        { text: "Menu", url: "" },
-        { text: "Contact", url: "" },
-        { text: "Shop", url: "" },
+        { text: "Menu", url: "/menu" },
+        { text: "Shop", url: "/shop" },
+        { text: "Contact", url: "/contact" },
       ],
     };
   },
